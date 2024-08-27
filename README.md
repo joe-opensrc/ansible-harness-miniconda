@@ -2,7 +2,7 @@
 
 Installs onto:
 
- - 
+ - rockylinux9 (docker) 
 
 ### Dependencies:
 
