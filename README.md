@@ -2,7 +2,13 @@
 
 Installs onto:
 
- - rockylinux9 (docker) 
+ - rockylinux9 (docker):
+    e.g.
+      ```
+        docker build -f testenv/Dockerfile -t repo/rocky9:miniconda .
+        docker run --rm --name miniconda -it repo/rocky9:miniconda
+      ```
+
 
 ### Dependencies:
 
@@ -15,7 +21,7 @@ Host tested with:
 
 ```
 git clone --recurse-submodules https://github.com/joe-opensrc/ansible-harness-miniconda
-cd ansible-harness-miniconda 
-ansible-playbook -i hosts miniconda.yml --limit <docker-container-name>
+cd ansible-harness-miniconda
+ansible-playbook -i hosts miniconda.yml --limit miniconda
 ```
 
